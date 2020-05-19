@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 
-const Ninjas = ({ninjas})=>{
-    
+const Ninjas = ({ninjas,deleteNinja})=>{
+    console.log("propsssssssssssssss",typeof deleteNinja)
         // const {ninjas} = props
         // const ninjaList = ninjas.map(ninja=>{
         //     const{name,age,department,id} = ninja
@@ -29,6 +29,7 @@ const Ninjas = ({ninjas})=>{
                     <h3>Name : {name}</h3>
                     <h3>Age :{age}</h3>
                     <h3>Department :{department}</h3>
+                    <button onClick={()=>{deleteNinja(id)}}>Delete</button>
                 </div>
             ) : null; 
         });
@@ -47,7 +48,7 @@ const Ninjas = ({ninjas})=>{
                         </div>
                     ) : null; 
                 })} */}
-                
+
                 {ninjaList}
               
             </div>
